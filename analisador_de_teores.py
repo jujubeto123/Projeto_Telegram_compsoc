@@ -11,6 +11,7 @@ def teor (pasta, arquivo):
 
     classifier = pipeline("zero-shot-classification", model="joeddav/xlm-roberta-large-xnli")
 
+    #exemplos de teores:
     labels = [
         "teor terrorista",
         "teor preconceituoso",
@@ -52,7 +53,8 @@ def teor (pasta, arquivo):
 
     return caminho_saida
 
-pasta = r"C:\Users\Julia\Desktop\compsoc"
-arquivo = "filteredJSONmensages.json"
+pasta = r"C:\sua\pasta\aqui"
+arquivo = "seu_arquivo.json"
 
 result = teor(pasta,arquivo)
+
