@@ -9,15 +9,11 @@ print("="*70)
 print("ANALISE DE CLASSIFICACAO - GERANDO RELATORIOS TXT")
 print("="*70)
 
-# Lista de arquivos OIOIOIO
+# Lista de arquivos (só o nome, mas o arquivo deve ser .json)
 arquivos = [
-    "teste_cientifico_classificacao_cientifico",
-    "teste_sensacionalista_classificacao_sensacionalista", 
-    "teste_preconceito_classificacao_preconceito",
-    "teste_consp_classificacao_consp",
-    "teste_terrorista_classificacao_terrorista",
-    "teste_critica_classificacao_critica",
-    "teste_religioso_classificacao_religioso"
+    "nome_do_seu_arquivo1",
+    "nome_do_seu_arquivo2",
+    "nome_do_seu_arquivo3"
 ]
 
 # Preparar resultados
