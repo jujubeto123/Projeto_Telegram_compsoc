@@ -9,7 +9,7 @@ print("="*70)
 print("ANALISE DE CLASSIFICACAO - GERANDO RELATORIOS TXT")
 print("="*70)
 
-# Lista de arquivos
+# Lista de arquivos OIOIOIO
 arquivos = [
     "teste_cientifico_classificacao_cientifico",
     "teste_sensacionalista_classificacao_sensacionalista", 
