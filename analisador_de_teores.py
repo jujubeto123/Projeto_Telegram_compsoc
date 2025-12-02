@@ -14,18 +14,18 @@ def teor (pasta, arquivo):
     labels = [
         "teor terrorista",
         "teor preconceituoso",
-        "teor de conspiração política",
-        "teor de crítica política",
-        "teor sensacionalista",
-        "teor neutro",
-        "teor revolucionário"
+        "teor conspiração política", 
+        "teor crítica política", 
+        "teor sensacionalista", 
+        "teor religioso", 
+        "teor científico", 
     ]
 
     resultados = []
 
     for msg in dados:
         result = classifier(
-            msg["Message"],
+            msg["message"],
             candidate_labels=labels,
             hypothesis_template="Esse texto possui {}."
         )
@@ -33,10 +33,10 @@ def teor (pasta, arquivo):
         distribuicao = {label: round(score, 2) for label, score in zip(result['labels'], result['scores'])}
 
         resultado_msg = {
-            "Message_ID": msg["Message_ID"],
-            "Date": msg["Date"],
-            "Forwards": msg["Forwards"],
-            "Views": msg["Views"],
+            "message_id": msg["message_id"],
+            "date": msg["date"],
+            "forwards": msg["forwards"],
+            "views": msg["views"],
             "Teor_mais_provavel": result['labels'][0],
             "Confiança": round(result['scores'][0], 2),
             "Distribuicao": distribuicao
@@ -52,9 +52,7 @@ def teor (pasta, arquivo):
 
     return caminho_saida
 
-#exemplo de como colocar
-#pasta = r"C:\Users\Davi\Desktop\faculdade\comp soc\Projeto certo\projeto_telegram\pasta_nova\resultados"
-#arquivo = "group_457_filtered-JSON.json"
+pasta = r"C:\Users\Julia\Desktop\compsoc"
+arquivo = "filteredJSONmensages.json"
 
-#result = teor(pasta,arquivo)
-
+result = teor(pasta,arquivo)
