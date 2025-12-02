@@ -14,7 +14,7 @@ except:
         with open(nome_arquivo + '.json', 'r', encoding='utf-8') as f:
             dados = json.load(f)
     except Exception as e:
-        print(f"❌ Erro ao carregar: {e}")
+        print(f"Erro ao carregar: {e}")
         exit()
 
 df = pd.DataFrame(dados)
@@ -174,7 +174,7 @@ if 'Forwards' in df.columns and 'Views' in df.columns and 'Teor_mais_provavel' i
         add_line("")
     
 else:
-    add_line("❌ Colunas necessárias não encontradas no DataFrame")
+    add_line("Colunas necessárias não encontradas no DataFrame")
     add_line("Colunas disponíveis:")
     for col in df.columns:
         add_line(f"  - {col}")
@@ -194,7 +194,7 @@ try:
     print(f" Total de linhas: {len(conteudo_txt)}")
     
 except Exception as e:
-    print(f"❌ Erro ao salvar arquivo: {e}")
+    print(f"Erro ao salvar arquivo: {e}")
 
 # Mostrar preview no console
 print("\n" + "=" * 70)
